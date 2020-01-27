@@ -9,25 +9,24 @@ body {
 
 }
 
-@media screen and (max-width: 1020px) {
 
 
-}
-@media screen and (min-width:1020px) and (max-width:1200px) {
 
-}
-@media screen and (min-width:900px) and (max-width:1020px) {
+/**@media screen and (min-width:1020px) and (max-width:1200px) {*!*/
 
-    }
+/*}*/
+/*@media screen and (min-width:900px) and (max-width:1020px) {*/
 
-@media screen and (min-width: 720px) and (max-width:900px) {
+/*    }*/
 
-    }
+/*@media screen and (min-width: 720px) and (max-width:900px) {*/
 
-@media screen and (max-width:900px) {
+/*    }*/
+
+/*@media screen and (max-width:900px) {*/
 
 
-}
+/*}*/
 @media screen and (max-width:720px) {
   body {
     display:grid;
@@ -62,7 +61,7 @@ body {
   color:black;
 }
 .logo {
-  grid-are:logo;
+  grid-area:logo;
   display:flex;
   justify-content:center;
 }
@@ -98,4 +97,39 @@ li {
   list-style:none;
   background-color:lightgrey;
   justify-content:center;
+}
+
+@media only screen and (min-width: 1020px) {
+    body {
+        display: grid;
+        gap: 10px;
+        margin: 10px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "logo nav" "pic pic" "main-text sub-text" "footer footer";
+    }
+
+    .alert-info {
+        visibility: hidden;
+    }
+
+    .logo {
+        grid-area: logo;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    li {
+        padding: 10px 20px;
+        margin: 0;
+        background-color: white;
+        justify-content: flex-end;
+        list-style:none;
+
+    }
 }
